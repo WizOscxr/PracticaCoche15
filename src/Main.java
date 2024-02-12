@@ -65,6 +65,13 @@ public class Main {
         } while (menuItem != 6);
     }
 
+    /**
+     *  Este metodo sirve para crear una nueva ficha de reparación.
+     *
+     *  El parámetro matrícula es seleccionado para introducir la matricula del coche que se piensa reparar.
+     *
+     *  El parametro vehicleExists se utiliza un boolean para saber si el vehículo con la matrícula asignada existe correctamente
+     */
     private void crearFitxaNovaReparacio() {
         System.out.println("Introdueix la matrícula del vehicle:");
         String matricula = input.next();
@@ -127,6 +134,12 @@ public class Main {
         System.out.println("No es poden afegir més fitxes de reparació. S'ha assolit el límit.");
     }
 
+    /**
+     * Este método se utiliza para modificar la reparación de un coche
+     *
+     * En el método en general se utilizan datos de los arrays que se han guardado para ver si se puede modificar o no.
+     *
+     */
     private void modificarReparacio() {
         System.out.println("Introdueix la matrícula del vehicle per buscar la reparació:");
         String matricula = input.next();
