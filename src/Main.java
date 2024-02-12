@@ -126,6 +126,7 @@ public class Main {
         }
         System.out.println("No es poden afegir més fitxes de reparació. S'ha assolit el límit.");
     }
+
     private void modificarReparacio() {
         System.out.println("Introdueix la matrícula del vehicle per buscar la reparació:");
         String matricula = input.next();
@@ -154,4 +155,3 @@ public class Main {
         }
     }
 }
-
