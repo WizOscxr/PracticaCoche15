@@ -126,4 +126,32 @@ public class Main {
         }
         System.out.println("No es poden afegir més fitxes de reparació. S'ha assolit el límit.");
     }
+    private void modificarReparacio() {
+        System.out.println("Introdueix la matrícula del vehicle per buscar la reparació:");
+        String matricula = input.next();
+        boolean found = false;
+
+
+        for (int i = 0; i < reparacions.length; i++) {
+            if (reparacions[i][0] != null && reparacions[i][0].equalsIgnoreCase(matricula)) {
+                System.out.println("Reparació trobada:");
+                System.out.println("Matrícula del vehicle: " + reparacions[i][0]);
+                System.out.println("Codi d'empleat: " + reparacions[i][1]);
+                System.out.println("Estat de la reparació: " + reparacions[i][2]);
+
+
+                System.out.println("Introdueix el nou estat de la reparació (oberta/en curs/acabada):");
+                String nouEstat = input.next();
+                reparacions[i][2] = nouEstat;
+                found = true;
+                break;
+            }
+        }
+
+
+        if (!found) {
+            System.out.println("No s'ha trobat cap reparació amb aquesta matrícula.");
+        }
+    }
 }
+
